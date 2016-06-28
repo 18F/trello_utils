@@ -99,3 +99,6 @@ Session.vim
 *~
 ## auto-generated tag files
 tags
+
+## For App Config
+env.json
