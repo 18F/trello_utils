@@ -10,7 +10,7 @@ Currently, this will only function on a pre_defined (see below) board.
 **NOTE IT WILL NOT FUNCTION AS IS**
 
 In order to successfully execute, please:
-* create an env.json file
+    * create an env.json file
 
 ```
 {
