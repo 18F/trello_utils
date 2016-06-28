@@ -35,9 +35,10 @@ def move_all_cards(trello, board_id, from_name, to_name):
     print
 
     list_cards = trello.lists.get(from_list['id'], cards="all")['cards']
+
     for c in list_cards:
         print "Moving:", c['name'], c['id']
-        trello.cards.update_idList(c['id'], to_list['id']
+        trello.cards.update_idList(c['id'], to_list['id'])
 
 def setup_trello():
     with open('env.json') as env:
