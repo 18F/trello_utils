@@ -13,7 +13,8 @@ Currently, this will only function on a pre_defined (see below) board.
 **NOTE THIS WILL NOT FUNCTION AS IS**
 
 In order to successfully execute, please:
-    * create an env.json file
+
+* create an env.json file
 
     ```
     {
@@ -23,14 +24,18 @@ In order to successfully execute, please:
     }
     ```
 
-    * Complete the `env.json` file by:
-        # Add your application key from: https://trello.com/app-key
-        # Creating an AUTH_TOKEN through something similar to:
-            ```
-            # Auth Manual Step Required: Call the URL printed by below via your browser, while logged in
-            #trello = TrelloApi( config["TRELLO_APP_KEY"] )
-            #get_auth_token(trello)
-            ```
-        # Grab the board id by navigating to your board and adding `.json` to the URL
+* Complete the `env.json` file by:
+
+   1. Add your application key from: https://trello.com/app-key
+   
+   2. Creating an AUTH_TOKEN through something similar to:
+
+   ```
+   # Auth Manual Step Required: Call the URL printed by below via your browser, while logged in
+   #trello = TrelloApi( config["TRELLO_APP_KEY"] )
+   #get_auth_token(trello)
+   ```
+   
+   3. Grab the board id by navigating to your board and adding `.json` to the URL
 
 Note: `env.json` is set in the `.gitignore` file.
