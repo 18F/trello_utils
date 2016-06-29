@@ -3,7 +3,10 @@
 misc cli tools for trello functionality
 
 This project utilizes the trello python library to streamline some trello actions:
-    * move_all_cards from one list within a board to another
+
+* move_all_cards from one list within a board to another
+
+* [un]tag_all_cards from one list within a board 
 
 Currently, this will only function on a pre_defined (see below) board.
 
