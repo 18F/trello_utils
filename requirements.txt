@@ -1,1 +1,2 @@
-trello
+requests==2.10.0
+trello==0.9.1
