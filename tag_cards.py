@@ -18,8 +18,8 @@ def del_all_cards(trello, board_id):
         trello.cards.delete( card['id'] )
 
 def get_auth_token(trello):
-    print "Call this URL in your browser and write down the code in env.json"
-    print trello.get_token_url('trello_utils', expires='never', write_access=True)
+    print("Call this URL in your browser and write down the code in env.json")
+    print(trello.get_token_url('trello_utils', expires='never', write_access=True))
 
 def get_labels(trello, board_id):
     b = trello.boards.get( board_id )
@@ -27,38 +27,38 @@ def get_labels(trello, board_id):
     return b['labelNames']
 
 def label_all_cards(trello, board_id, list_name, label_name):
-    print "Tagging all cards in <%s> with <%s>" % (list_name, label_name)
+    print("Tagging all cards in <%s> with <%s>" % (list_name, label_name))
 
     board_lists = trello.boards.get_list( board_id )
 
     in_list = filter(lambda l: l['name'] == list_name, board_lists)[0]
 
-    print "\tIn:", in_list['name'], in_list['id']
-    print
+    print("\tIn:", in_list['name'], in_list['id'])
+    print("")
 
     list_cards = trello.lists.get(in_list['id'], cards="all")['cards']
 
     for c in list_cards:
-        print "Tagging:", c['name'], c['id']
+        print("Tagging:", c['name'], c['id'])
         try:
             trello.cards.new_label( c['id'], label_name ) #throws HTTP 400 if label already exists
         except:
             pass
 
 def unlabel_all_cards(trello, board_id, list_name, label_name):
-    print "Tagging all cards in <%s> with <%s>" % (list_name, label_name)
+    print("Tagging all cards in <%s> with <%s>" % (list_name, label_name))
 
     board_lists = trello.boards.get_list( board_id )
 
     in_list = filter(lambda l: l['name'] == list_name, board_lists)[0]
 
-    print "\tIn:", in_list['name'], in_list['id']
-    print
+    print("\tIn:", in_list['name'], in_list['id'])
+    print("")
 
     list_cards = trello.lists.get(in_list['id'], cards="all")['cards']
 
     for c in list_cards:
-        print "Tagging:", c['name'], c['id']
+        print("Tagging:", c['name'], c['id'])
         try:
             trello.cards.delete_label_color( label_name, c['id'] )
         except:
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     try:
         tag_color = sys.argv[2]
     except:
-        print json.dumps( get_labels(trello, config['BOARD_ID'] ), indent=4, sort_keys=True)
+        print(json.dumps( get_labels(trello, config['BOARD_ID'] ), indent=4, sort_keys=True))
         sys.exit(-1)
 
     # Auth Manual Step Required: Call the URL printed by below via your browser, while logged in
