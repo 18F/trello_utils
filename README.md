@@ -8,7 +8,7 @@ This project utilizes the trello python library to streamline some trello action
 
 * [un]tag_all_cards from one list within a board 
 
-* dumo all cards (including descriptin and text edit actions) to a markdown (printed out)
+* demo all cards (including descriptin and text edit actions) to a markdown (printed out)
   Note: Attachments and other data may be lost
 
 Currently, this will only function on a pre_defined (see below) board.
