@@ -39,3 +39,7 @@ In order to successfully execute, please:
    3. Grab the board id by navigating to your board and adding `.json` to the URL
 
 Note: `env.json` is set in the `.gitignore` file.
+
+# Additional Reference
+Javascript to copy trell (via web) to text/MD
+    * https://gist.github.com/jeremyzilar/17f001c999e234083796215ca79e26eb
