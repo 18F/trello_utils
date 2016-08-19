@@ -50,7 +50,7 @@ def dump_list_cards(in_list):
             print "\t`"
 
 @cli.command()
-def dump_board(name):
+def dump_board():
     board_lists = trello.boards.get_list( config['BOARD_ID'] )
 
     for l in board_lists:
